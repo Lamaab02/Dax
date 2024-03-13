@@ -1,0 +1,56 @@
+.navbar{
+    height: 100px;
+    img {
+        height: 75px;
+    }
+    .warpper{
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .tabs {
+        display: flex;
+        gap: 60px;
+        // text-transform: uppercase;
+        font-size: large;
+        font-weight: bold;
+        
+    }
+    .tabs > a {
+        cursor: pointer;
+        position: relative;
+        text-transform: uppercase;
+    }
+    a::after{    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #81c690;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    
+    .tabs > a:hover::after {
+        width: 100%; 
+        left: 0; 
+    }
+
+    .tabs > a:hover {
+        color: #81c690;
+        transition: 100ms;
+    }
+
+    .vl{
+        border-left: 3px solid #B1DDFF;
+        height: 30px;
+    }
+    
+    
+}
