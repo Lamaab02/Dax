@@ -1,5 +1,7 @@
+import Carousel from "../carousel/carousel";
 import "./hero.scss" 
 import { motion } from "framer-motion";
+import { imgs } from "../carousel/data";
 
 const textVariants = {
     initial: {
@@ -53,8 +55,11 @@ export default function Hero() {
         <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
             Design Automation Systems for X
         </motion.div>
-        <div className="imageContainer">
-                <img src="../../public/hero.png"/>
+        {/* This here will be the slider for the images */}
+        <div className="imageContainer"> 
+
+                {/* <img src="../../public/hero.png"/> */}
+                <Carousel images={imgs}/> 
         </div>
     </div>
   )
